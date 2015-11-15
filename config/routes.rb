@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
+  get 'static_pages/about'
+
+  get 'static_pages/contact'
+
+  get 'static_pages/term_of_services'
+
+  get 'static_pages/team'
+
     get 'signup'  => 'users#new'
 
 
