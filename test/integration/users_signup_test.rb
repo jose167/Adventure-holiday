@@ -4,7 +4,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
 
   test "invalid signup information" do
     get signup_path 
-    assert_difference 'User.count', 2 do
+    assert_difference 'User.count', 1 do
        post_via_redirect users_path, user: { fname:  "",
                                              lname:  "",
                                              email: "user@invalid",
