@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-    get 'signup_path' => 'users#new'
+    get 'signup' => 'users#new'
     resources :users
 
 
