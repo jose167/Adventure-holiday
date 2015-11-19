@@ -1,0 +1,16 @@
+Run options: --seed 26827
+
+# Running:
+
+F.
+
+Finished in 0.847612s, 2.3596 runs/s, 9.4383 assertions/s.
+
+  1) Failure:
+UsersLoginTest#test_login_with_valid_information [/home/ubuntu/workspace/adventure_app/test/integration/users_login_test.rb:26]:
+Expected exactly 0 elements matching "a[href="/login"]", found 1..
+Expected: 0
+  Actual: 1
+
+2 runs, 8 assertions, 1 failures, 0 errors, 0 skips
+]2;[Minitest results] 2 tests

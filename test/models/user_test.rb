@@ -66,6 +66,14 @@ class UserTest < ActiveSupport::TestCase
     @user.save
     assert_not duplicate_user.valid?
   end
-
+  
+    # Returns a random token.
+  def User.new_token
+    SecureRandom.urlsafe_base64
+  end
+  
+  test "authenticated? should return false for a user with nil digest" do
+    assert_not @user.authenticated?('')
+  end
 
 end
