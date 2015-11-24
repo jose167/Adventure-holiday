@@ -1,0 +1,22 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+one:
+  title: MyString
+  description: MyText
+  image_url: MyString
+  location: MyString
+  duration: MyString
+  season: MyString
+  level: MyString
+  tour_type: MyString
+  Price: 9.99
+
+two:
+   title: MyString
+  description: MyText
+  image_url: MyString
+  location: MyString
+  duration: MyString
+  season: MyString
+  level: MyString
+  tour_type: MyString
+  Price: 9.99

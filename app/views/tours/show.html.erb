@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong> title:</strong>
+  <%= @tour. title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tour.description %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @tour.image_url %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @tour.location %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @tour.duration %>
+</p>
+
+<p>
+  <strong>Season:</strong>
+  <%= @tour.season %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @tour.level %>
+</p>
+
+<p>
+  <strong>Tour type:</strong>
+  <%= @tour.tour_type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @tour.Price %>
+</p>
+
+<%= link_to 'Edit', edit_tour_path(@tour) %> |
+<%= link_to 'Back', tours_path %>
