@@ -1,0 +1,96 @@
+#footer{
+position:relative;
+float:left;
+clear:both;
+background-image:url(/assets/footer.gif);
+width:850px;
+margin:0px 0px 10px 10px;
+padding:0px 15px 0px 15px;
+background-color: #58595b;
+}
+
+#footer a:link, #footer a:visited, #footer a:active{
+color:#FFF;
+list-style:none;
+list-style-type:none;
+line-height:2px;
+text-decoration:none;
+}
+
+#footer a:hover{
+color:#cee914;
+}
+
+#footer1{
+position:relative;
+float:left;
+width:220px;
+margin:0px;
+padding:0px 0px 0px 15px;
+color:#FFF;
+}
+
+#footer2{
+position:relative;
+float:left;
+width:190px;
+margin:0px;
+padding:0px 0px 0px 15px;
+color:#FFF;
+}
+
+#footer3{
+position:relative;
+float:left;
+width:170px;
+margin:0px;
+padding:0px 0px 0px 0px;
+}
+
+#footer4{
+position:relative;
+float:left;
+width:220px;
+margin:0px;
+padding:0px 0px 0px 15px;
+color:#fff;
+}
+
+#footer4 ol{
+list-style:none;
+list-style-type:none;
+padding:0px;
+margin:0px;
+}
+#footer4 ol li{
+font-family:Arial, Helvetica, sans-serif;
+font-size:12;
+line-height:17px;
+}
+
+#footerend{
+position:relative;
+clear:both;
+width:900px;
+height:1px;
+background-color:#FFF;
+}
+
+#imagelink a, img{
+border:10px;
+border-color:#F60;
+}
+
+ol{
+padding-left:15px;
+list-style:disc;
+line-height:2;
+color:#cee914;
+}
+
+strong{
+color:#C00;
+}
+
+.boldtext{
+font-weight:bold;}
