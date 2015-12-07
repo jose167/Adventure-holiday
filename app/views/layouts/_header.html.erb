@@ -4,7 +4,7 @@
     <a href="search.html"><b>SEARCH</b></a> &nbsp; &nbsp;<br /><br /> 
     <%= link_to "Log in", login_path %>
     <%= link_to "Sign up now!", signup_path %></p>
-    <img src="assets/basketred.png" alt="Go To Basket" width="20" height="20" border="0"/></a><a href="basket.html"><b>BASKET</b></a><br />
+    <%= link_to "carts#current", current_path %>,<img src="assets/basketred.png" alt="Go To Basket" width="20" height="20" border="0"/></a>
 	</div>
 	<!--logo closed-->
 
@@ -14,7 +14,7 @@
 
      <li><%= link_to "about",   about_path %></li>
      
-	 <li><%= link_to "tours", tours_path %></li>
+	 <li><%= link_to "destination", destination_path %></li>
 	 	<ul>
 	 	<li><a href="asia.html">ASIA</a></li>
 	 	<li><a href="africa.html">AFRICA</a></li>

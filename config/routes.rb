@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+    get 'carts/current' => 'carts#current', as: 'current'
+
+  resources :line_items
+  resources :carts
+  get 'store/index', as: 'destination'
   
+
   resources :tours
   root 'static_pages#home'
   
