@@ -1,4 +1,5 @@
 class Cart < ActiveRecord::Base
+    belongs_to :user
     has_many :line_items, dependent: :destroy
     def add_tour(tour_id)
         current_item = line_items.find_by_tour_id(tour_id)

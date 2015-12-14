@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
+  def current_user
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  end
+
+
 private
   def current_cart
       Cart.find(session[:cart_id])
