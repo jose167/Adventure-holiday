@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  
+  resources :orders
+  get 'store/index', as: 'destination'
+  resources :store
+  
     get 'carts/current' => 'carts#current', as: 'current'
 
   resources :line_items
   resources :carts
-  get 'store/index', as: 'destination'
+  
   
 
   resources :tours

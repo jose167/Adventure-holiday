@@ -1,0 +1,41 @@
+#content{
+position:relative;
+float:left;
+background-color:#FFF;/* White BACKGROUND behind images with prices */
+width:870px;
+padding-top:15px;
+padding-left:15px;
+padding-right:15px;
+}
+
+#content a:link, #content a:visited, #content a:active{
+color:#c00;
+}
+
+#content a:hover{
+color:#000;
+}
+
+#content1{
+position:relative;
+float:left;
+background-color:#fff;
+width:260px;
+padding:0px 45px 0px 0px;
+}
+
+#content2{
+position:relative;
+float:left;
+background-color:#fff;
+width:260px;
+padding:0px 45px 0px 0px;
+}
+
+#content3{
+position:relative;
+float:left;
+background-color:#fff;
+width:260px;
+padding:0px 0px 0px 0px;
+}

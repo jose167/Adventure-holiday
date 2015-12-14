@@ -60,6 +60,12 @@ class ToursController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+   def who_bought
+    @tour = tour.find(params[:id])
+    respond_to do |format|
+    format.atom
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
