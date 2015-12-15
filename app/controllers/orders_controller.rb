@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
+  before_action :logged_in_user
   before_action :set_order, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /orders
   # GET /orders.json
@@ -19,7 +21,9 @@ class OrdersController < ApplicationController
     redirect_to store_index_path, notice: "Your cart is empty"
     return 
     end
-    @order = Order.new
+    @order = Order.new(user_id: @user_id)
+    @order.user_id = current_user.id
+    @order.save
     respond_to do |format|
     format.html # new.html.erb
     format.json { render json: @order }
@@ -33,8 +37,10 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params)
+    @order = Order.new(order_params, user_id: @user_id)
     @order.add_line_items_from_cart(current_cart)
+    @order.user_id = current_user.id
+    @order.save
 
     respond_to do |format|
       if @order.save

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+   root 'static_pages#home'
   resources :orders
   get 'store/index', as: 'destination'
   resources :store
@@ -12,7 +13,7 @@ Rails.application.routes.draw do
   
 
   resources :tours
-  root 'static_pages#home'
+ 
   
   get   'about'   => 'static_pages#about'
 
@@ -23,12 +24,12 @@ Rails.application.routes.draw do
   get    'team'   => 'static_pages#team'
 
   get 'sessions/new'
-
+ resources :users
     get     'signup' => 'users#new'
     get     'login'  => 'sessions#new'
     post    'login'   => 'sessions#create'
-    delete  'logout'  => 'sessions#destroy'
-    resources :users
+    get    'logout'  => 'sessions#destroy'
+   
 
 
 

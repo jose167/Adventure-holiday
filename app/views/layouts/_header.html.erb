@@ -1,10 +1,16 @@
 <div id="container">
 
 	<div id="logo">
-    <a href="search.html"><b>SEARCH</b></a> &nbsp; &nbsp;<br /><br /> 
-    <%= link_to "Log in", login_path %>
-    <%= link_to "Sign up now!", signup_path %></p>
-    <%= link_to "carts#current", current_path %>,<img src="assets/basketred.png" alt="Go To Basket" width="20" height="20" border="0"/></a>
+		 <% if logged_in? %>
+			<%= link_to "Settings", edit_user_path(current_user) %>
+			<%= link_to "Profile", current_user %>
+   			<%= link_to "Log out", logout_path, method: "delete" %> 
+   		 <% else %>
+          <%= link_to "Log in", login_path %>	
+           <%= link_to "Sign up now!", signup_path %>
+ 		<% end %>
+   			
+    		<%= link_to "carts#current", current_path %>,<img src="assets/basketred.png" alt="Go To Basket" width="20" height="20" border="0"/></a>
 	</div>
 	<!--logo closed-->
 

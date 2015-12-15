@@ -61,11 +61,11 @@ class ToursController < ApplicationController
     end
   end
   
-   def who_bought
+def who_bought
     @tour = tour.find(params[:id])
     respond_to do |format|
     format.atom
-  end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -77,4 +77,5 @@ class ToursController < ApplicationController
     def tour_params
       params.require(:tour).permit(:title, :description, :image_url, :location, :duration, :season, :level, :tour_type, :Price)
     end
+end
 end

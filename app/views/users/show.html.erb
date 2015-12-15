@@ -5,6 +5,8 @@
 <h1>
   <%= gravatar_for @user %>
   <%= @user.fname %>
+    It's <%= Time.now %>
+    We have <%= pluralize(@total_orders, "orders") %>
 </h1>
    </section>
   </aside>

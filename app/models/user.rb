@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
     has_one :cart
+    has_many :orders
     attr_accessor :remember_token
     before_save { self.email = email.downcase }
     validates(:fname, presence: true, length: { maximum: 50 })
@@ -39,4 +40,13 @@ class User < ActiveRecord::Base
   def forget
     update_attribute(:remember_digest, nil)
   end
+  
+  def current_cart
+    if self.cart.empty?
+      self.cart.create!
+    end
+    self.cart
+  end
+  
+  
 end
