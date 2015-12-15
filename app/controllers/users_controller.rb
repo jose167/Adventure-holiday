@@ -4,6 +4,8 @@ class UsersController < ApplicationController
   def show 
     @user = User.find(params[:id])
     @total_orders = Order.count
+    @orders = Order.all
+
   end
   
   def new
