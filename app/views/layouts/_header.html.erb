@@ -1,18 +1,26 @@
 <div id="container">
 
 	<div id="logo">
+		<%= form_tag tours_path, :method => 'get' do %>
+  		<p>
+		<%= text_field_tag :search, params[:search] %>
+		<%= submit_tag "Search", :name => nil %>
+		</p>
+	<% end %>
+		
 		 <% if logged_in? %>
-			<%= link_to "Settings", edit_user_path(current_user) %>
-			<%= link_to "Profile", current_user %>
-   			<%= link_to "Log out", logout_path, method: "delete" %> 
+		 <%= link_to '<button type="button">Update Profile</button>'.html_safe, edit_user_path(current_user) %>
+		<%= link_to '<button type="button">Profile</button>'.html_safe, current_user %>
+   		<%= link_to '<button type="button">Log out</button>'.html_safe, logout_path, method: "delete" %> 
    		 <% else %>
-          <%= link_to "Log in", login_path %>	
-           <%= link_to "Sign up now!", signup_path %>
+   		 <%= link_to '<button type="button">Login</button>'.html_safe, login_path %>
+         <%= link_to '<button type="button">Signup Up</button>'.html_safe, signup_path %>
  		<% end %>
-   			
-    		<%= link_to "carts#current", current_path %>,<img src="assets/basketred.png" alt="Go To Basket" width="20" height="20" border="0"/></a>
+ 		<%= link_to current_path do %>
+  		<%= image_tag ("basketred.png") %> 
+		<% end %>
+   		
 	</div>
-	<!--logo closed-->
 
 <div id="menu">
 	 <ul>
@@ -27,15 +35,6 @@
 	 	<li><a href="southamerica.html">SOUTH AMERICA</a></li>
         <li><a href="europe.html">EUROPE</a></li>
         </ul>
-        
-	 </li>
-     	<li><a href="activity.html">ACTIVITY</a>
-     	<ul>
-     	<li><a href="biking.html">BIKING</a></li>
-     	<li><a href="walking.html">WALKING</a></li>
-     	<li><a href="multiactivity.html">MULTI ACTIVITY</a></li>
-     	</ul>
-     </li>
 
 	  <li><%= link_to "contact", contact_path %></li>
 	 </li>

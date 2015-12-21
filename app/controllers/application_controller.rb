@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::Base  
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
+
+
  # Confirms a logged-in user
   def logged_in_user
       unless logged_in?
@@ -16,12 +18,11 @@ class ApplicationController < ActionController::Base
       end
   end
   
-  def show
-  @user_orders = User.find_by_order_id
-  end
-
-
+ 
 private
+
+ 
+
   def current_cart
       Cart.find(session[:cart_id])
   rescue ActiveRecord::RecordNotFound

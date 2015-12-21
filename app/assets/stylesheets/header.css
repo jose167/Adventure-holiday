@@ -44,6 +44,10 @@ border-bottom:none;
 text-decoration:none;
 }
 
+#search {
+border: 1px solid;    
+    
+}
 #headertext{
 position:relative;
 float:left;
@@ -64,6 +68,7 @@ padding:0px;
 margin-left:10px;
 margin-right:10px;
 z-index:500;
+margin-bottom:10px;
 }
 
 #menu ul{
@@ -130,3 +135,68 @@ background-color:#58595b;
 font-weight:bold;
 }
  
+.form {
+background:rgba($form-bg,.9);
+padding: 40px;
+max-width:600px;
+margin:40px auto;
+border-radius:$br;
+box-shadow:0 4px 10px 4px rgba($form-bg,.3);
+}
+h1{
+color:#cee914;
+text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 40px;
+margin-bottom:15px;
+padding:0px;
+}
+
+.continent {
+		width:800px;
+		height:600px;
+		border: 10px solid;
+		border-color:#d3d3d3;
+		
+		margin-left: 50px;
+		padding: 8px;
+		
+}
+
+.continet_text {
+		width:400px;
+		height:600px;
+		float: left;
+		text-align: justify;
+		padding: 5px;
+
+}
+
+.continent_pic {
+		width:350px;
+		height:280px;
+		float: right;
+		padding: 0px;
+}
+
+#reviewCol1{
+position:relative;
+float:left;
+background-color:#fff;
+width:580px;
+padding:0px 0px 0px 0px;
+}
+
+#reviewCol3{
+position:relative;
+float:left;
+background-color:#fff;
+width:280px;
+padding:0px 0px 0px 15px;
+}
+
+.home_pics {
+	width: 260px;
+	height: 180px;
+	
+}

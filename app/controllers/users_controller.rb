@@ -1,12 +1,18 @@
 class UsersController < ApplicationController
-  
+  before_filter :record_user_activity
    
   def show 
     @user = User.find(params[:id])
     @total_orders = Order.count
     @orders = Order.all
-
+    
   end
+  
+   def record_user_activity
+    if current_user
+      current_user.touch :last_seen_at
+    end
+   end
   
   def new
     @user = User.new 

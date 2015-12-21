@@ -1,6 +1,36 @@
 <% provide(:title, "Contact us") %>
 
 
-    <h1>Contact us  // Adventure Holiday </h1>
+    <h1>Contact us</h1>
     
+  
+ <br>
+<div id="reviewCol2">
+<fieldset>
+    <legend><img src="images/contact.png" width="400" height="50" alt="Your Adventure Starts Here" /></legend><br>	
+
+	<form id="contact_form" action="" method="POST" onsubmit="return validateForm();" enctype="multipart/form-data">
+ 
+	<div class="row">
+		<label class="required" for="name"><b>Name:</b></label><br></br>
+		<input id="name" name="name" type="text" value="" size="35" /><br />
+		<span id="name_validation" class="error"></span>
+	</div>
+  <br>
+	<div class="row">
+		<label class="required" for="email"><b>Email:</b></label><br></br>
+		<input id="email" name="email" type="text" value="" size="35" /><br />
+		<span id="email_validation" class="error"></span>
+	</div>
+	<br>
+	<div class="row">
+		<label class="required" for="message"><b>Enquiry:</b></label><br></br>
+		<textarea id="message" name="message" rows="7" cols="31"></textarea><br />
+		<span id="message_validation" class="error"></span>
+	</div>
+    <br></br>
+	</fieldset>
+
+</form>
+</div>
     

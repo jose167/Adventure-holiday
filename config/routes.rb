@@ -9,12 +9,8 @@ Rails.application.routes.draw do
 
   resources :line_items
   resources :carts
-  
-  
-
   resources :tours
  
-  
   get   'about'   => 'static_pages#about'
 
   get   'contact' => 'static_pages#contact'
@@ -29,6 +25,7 @@ Rails.application.routes.draw do
     get     'login'  => 'sessions#new'
     post    'login'   => 'sessions#create'
     get    'logout'  => 'sessions#destroy'
+    get   'profile'  => 'users#show'
    
 
 

@@ -2,15 +2,13 @@
 <!DOCTYPE html>
 
 <!-- Start Slider BODY section -->
-	<div id="wowslider-container1">
+
 		<div class="ws_images">
-			<a href="skiiing.html"><img src="/assets/home_page/banner1.jpg" alt="banner1" title="banner1" id="wows0"/></a>
-			<a href="watersports.html"><img src="/assets/home_page/banner2.jpg" alt="banner2" title="banner2" id="wows1"/></a>
-			<a href="walking.html"><img src="/assets/home_page/banner3.jpg" alt="banner3" title="banner3" id="wows2"/></a>
-		</div>
-	</div>
-	<script type="text/javascript" src="engine1/script.js"></script>
-    </script>
+		  	<img src="/assets/home_page/banner1.jpg" alt="banner1" title="banner1" id="wows0"/>
+	
+	    </div>
+	
+ 
 	<!-- End Slider BODY section -->	
            <br> 
 	<div id="icons">
@@ -27,42 +25,51 @@
     <div id="content">
    
 	<div id="content1">
-	<a href="biking.html"><img src="/assets/home_page/biking.jpg" width="260" height="180" alt="Biking Holidays" /></a>
-	<h1>Ring of Kerry Cycling</h1>
+	  <%= link_to destination_path do %>
+  		<%= image_tag ("home_page/biking.jpg"), :class => "home_pics" %> 
+  	<% end %>
+	<h2>Ring of Kerry Cycling</h2>
     <p>With the highest mountain range in Ireland as a backdrop to our RING OF KERRY CYCLING holiday the world famous Ring of Kerry traces the coastline of the Iveragh Peninsula encompassing Muckross, Killarney National Park, historic Derrynane and the picturesque villages of Sneem, Kenmare and Glenbeigh. <br /><br />
-    <a href="reviews.html">reviews</a><br /></p>
+    
   	</br>
-    <a href="biking.html"><img src="/assets/home_page/water.jpg" width="260" height="180" alt="Water Sports Holidays" /></a>
-    <h1>Iceland Island Adventure </h1>
+  	  <%= link_to destination_path do %>
+  	<%= image_tag ("home_page/water.jpg"), :class => "home_pics" %> 
+  		<% end %>
+    <h2>Iceland Island Adventure </h2>
     <p>3 days in Iceland including all of its greatest adventure tours in our bestselling holiday package to Reykjavík. The ultimate adventure holiday to the island of Ice and Fire! The Iceland Island Adventure is built around many of the greatest activity tours and all the must see nature sights that South-Iceland has to offer with spare time to explore and experience Reykjavík city on your own.  <br /><br />
-    <a href="reviews.html">reviews</a><br /></p>
+    
 	</div><!--content1 closed-->
 
 
 	<div id="content2">
-    <a href="biking.html"><img src="/assets/home_page/walkingitaly.jpg" width="260" height="180" alt="Walking Holidays" /></a>
-  	<h1>Hiking Bordeauxs Vineyards</h1>
+	    <%= link_to destination_path do %>
+	  <%= image_tag ("home_page/walkingitaly.jpg"), :class => "home_pics" %>
+	  	<% end %>
+  	<h2>Hiking Bordeauxs Vineyards</h2>
     <p>On this Self-guided hiking Bordeaux’s vineyards tour you will cross some of the most famous vineyards in the world experiencing a wonderful mix of beautiful landscapes, oenological pleasure and cultural discoveries… Explore the vineyards and cobbled streets of St. Emilion, to the vineyards of Sauternes. <br /><br />
-    <a href="reviews.html">reviews</a><br /></p>
     </br>
-    <a href="biking.html"><img src="/assets/home_page/bikingfrance.jpg" width="260" height="180" alt="Family Holidays" /></a>
-    <h1>Tuscany Bike Tour</h1>
+      <%= link_to destination_path do %>
+    <%= image_tag ("home_page/bikingfrance.jpg"), :class => "home_pics" %>
+    	<% end %>
+    <h2>Tuscany Bike Tour</h2>
     <p>On the Tuscany Self Guided Bike Tour explore the heart of Tuscany by bike from Lucca to the famous leaning Tower of Pisa and Leonardo da Vinci’s birthplace. Ride through the Chianti’s vineyards and pedal back to the fortified town of Lucca. •	Pedal through the most beautiful vineyards of the Chianti region <br /><br />
-    <a href="reviews.html">reviews</a><br /></p>
 	</div><!--content2 closed-->
 
 
 	<div id="content3">
-    <a href="biking.html"><img src="/assets/home_page/skiingswitz.jpg" width="260" height="180" alt="Multi Sports Holiday" /></a>
-  	<h1>Myanmar Adventure In-Style</h1>
+	   <%= link_to destination_path do %>
+	  <%= image_tag ("home_page/skiingswitz.jpg"), :class => "home_pics" %>
+	  	<% end %>
+  	<h2>Myanmar Adventure In-Style</h2>
     <p>Free from the clutches of tomorrow’s technologies, the unassuming nature of Myanmar’s people captures the hearts of travelers, with plenty to also entertain the adventure hungry. Cruises along the Irrawaddy and on Inle Lake add to Myanmar’s unique charm.<br /><br />
-    <a href="reviews.html">reviews</a><br /></p>
     </br>
-    <a href="biking.html"><img src="/assets/home_page/surfing.jpg" width="260" height="180" alt="Surfing Holidays" /></a>
-    <h1>Rafting and Kayaking La Gran Sabana</h1>
+     <%= link_to destination_path do %>
+     <%= image_tag ("home_page/surfing.jpg"), :class => "home_pics" %>
+     	<% end %>
+    <h2>Rafting and Kayaking La Gran Sabana</h2>
     <p>Rafting in La Gran Sabana Venezuela, Rio Yuruani (Remo & Body Rafting Rafting) Rio Yuruani. This activity is practiced in the Rio Yuruani in the Gran Sabana, departing from Santa Elena Yuruani until the river, jumping rafting is practiced is called JUMP THE CURTAIN
  <br /><br />
-    <a href="reviews.html">reviews</a><br /></p>
+
 	</div><!--content3 closed-->
 
     

@@ -3,16 +3,20 @@
 <% end %>
 
 
-<h1>Your Pragmatic Catalog</h1>
+<h1>Start the Adventure</h1>
+	<p>Pick your favorite place to start the Adventure</p>
 
  <% @tours.each do |tour| %>
-  <div class="entry">
-    <%= image_tag(tour.image_url) %>
-        <h3><%= tour.title %></h3>
-            <%= sanitize(tour.description) %>
-    <div class="price_line">
+  <div class="continent">
+      <div class="cont_tour"> 
+      <br>
+      <h3><%= tour.title %></h3>
+        <%= sanitize(tour.description, length: { maximum: 40 }) %>
         <span class="price"><%= number_to_currency(tour.Price) %></span>
-            <%= button_to 'Add to Cart', line_items_path(tour_id: tour)%>
-    </div>
+        <%= button_to 'Add to Cart', line_items_path(tour_id: tour)%>
+        </div>  
+            <%= image_tag(tour.image_url, :class => "continent_pic") %>
+            <br>
+            <br>
   </div>
 <% end %>

@@ -1,37 +1,23 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Tours</h1>
-
-<table>
-<% @tours.each do |tour| %>
-
-  <tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-  
-    <td>
-      <%= image_tag(tour.image_url, :class =>'list_image')%>
-    </td>
-
-    <td class="list_description">
-      <dl>
-        <dt><%= tour.title %></dt>
-        <dd><%= truncate(strip_tags(tour.description),
-                :length => 80) %></dd>
-                <td><%= tour.Price %></td>
-      </dl>
-    </td>
-  
-    <td class="list_actions">  
-        <%= link_to 'Show', tour %><br/>
-        <%= link_to 'Edit', edit_tour_path(tour) %><br/>
-        <%= link_to 'Destroy', tour, method: :delete, data: { confirm: 'Are you sure?' } %>
-    </td>
-   </tr>
-  <% end %>
- </table>
-</div>
-
-<br>
-
-<%= link_to 'New Tour', new_tour_path %>
+<% end %>
 
 
+<h1>Start the Adventure</h1>
+	<p>Pick your favorite place to start the Adventure</p>
+	
+ <% @tours.each do |tour| %>
+  <div class="entry">
+    <%= image_tag(tour.image_url) %>
+        <h3><%= tour.title %></h3>
+            <%= sanitize(tour.description) %>
+    <div class="price_line">
+        <span class="price"><%= number_to_currency(tour.Price) %></span>
+            <%= button_to 'Add to Cart', line_items_path(tour_id: tour)%>
+    </div>
+  </div>
+<% end %>
+
+<h1>Loook all our tours</h1>
+	
+	<%= link_to "destination", destination_path %>

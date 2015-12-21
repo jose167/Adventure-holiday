@@ -12,6 +12,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    
   end
 
   # GET /orders/new
@@ -22,8 +23,8 @@ class OrdersController < ApplicationController
     return 
     end
     @order = Order.new(user_id: @user_id)
-    @order.user_id = current_user.id
-    @order.save
+   
+    
     respond_to do |format|
     format.html # new.html.erb
     format.json { render json: @order }
@@ -37,7 +38,7 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
   def create
-    @order = Order.new(order_params, user_id: @user_id)
+    @order = Order.new(order_params, user_id: @user_id, tour_id: @tour_id)
     @order.add_line_items_from_cart(current_cart)
     @order.user_id = current_user.id
     @order.save
@@ -47,7 +48,7 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         format.html { redirect_to store_index_path, notice:
-        'Thank you for your order.'}
+        'Thank you for your order. You can find your order details in your profile'}
         format.json { render json: @order, status: :created, location: @order }
       else
         @cart = current_cart
@@ -89,6 +90,6 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.require(:order).permit(:name, :address, :email, :pay_type, :tour_id)
     end
 end

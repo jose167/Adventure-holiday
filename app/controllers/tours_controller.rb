@@ -3,29 +3,30 @@ class ToursController < ApplicationController
 
   # GET /tours
   # GET /tours.json
-  def index
-    @tours = Tour.all
-  end
+def index
+    if params[:search]
+      @tours = Tour.search(params[:search]).order("created_at DESC")
+    else
+      @tours = Tour.order("created_at DESC")
+    end
+end
 
-  # GET /tours/1
-  # GET /tours/1.json
-  def show
-  end
+def show
+end
 
   # GET /tours/new
-  def new
+def new
     @tour = Tour.new
-  end
+end
 
   # GET /tours/1/edit
-  def edit
-  end
+def edit
+end
 
   # POST /tours
   # POST /tours.json
   def create
     @tour = Tour.new(tour_params)
-
     respond_to do |format|
       if @tour.save
         format.html { redirect_to @tour, notice: 'Tour was successfully created.' }
